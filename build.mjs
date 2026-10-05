@@ -60,21 +60,25 @@ const T = {
 <p class="meta">Effective ${effective.en}</p>
 <p>Kareli Sudoku ("Kareli", "the app") is made by ${developer}. This policy explains what happens to your information when you use the app.</p>
 <h2>The short version</h2>
-<p><mark>Kareli does not collect, store or share any personal data.</mark> There is no account, no advertising, no analytics and no tracking.</p>
+<p><mark>Kareli itself does not collect, store or share personal data.</mark> There is no account, no advertising and no tracking. Photos of book puzzles are read on your device and never uploaded. On Android, the text recognition used for photo import (Google ML Kit) sends Google some technical diagnostics, described below.</p>
 <h2>What stays on your device</h2>
 <p>The app saves your games, notes, daily results, streak, the techniques you have seen and your settings in the app's own storage on your device. This information is never sent to us or to anyone else. It is deleted when you uninstall the app or clear its data. If your phone's own backup is turned on (for example iCloud or Google backup), the operating system may include this data in your personal backup; we cannot access it.</p>
+<h2>Photos of book puzzles</h2>
+<p>If you use Take a photo or Choose a photo, you crop the photo on your device and the digits are read on your device: with Apple Vision on iPhone and with Google ML Kit on Android. The photo is never uploaded, and the app deletes its copy right after reading it. The camera is used only when you tap Take a photo, and you can refuse access.</p>
+<h2>Google ML Kit (Android only)</h2>
+<p>To read digits on Android, Kareli uses Google ML Kit on-device text recognition. ML Kit does not send your photo, but it sends Google technical data for diagnostics and usage analytics: device manufacturer, model and OS version, the app package name and version, a per-installation identifier, performance metrics and error codes. This happens only when you use photo import. Google encrypts this data in transit and does not pass it to third parties; see <a href="https://developers.google.com/ml-kit/android-data-disclosure">Google’s ML Kit data disclosure</a>.</p>
 <h2>Network use</h2>
 <p>Puzzles are created on your device and the app works offline. The app does not send requests to our servers. When you tap Privacy Policy, Terms of Use or Support in Settings, the page opens in your device's browser and is served by GitHub Pages, which may log basic technical data such as your IP address under GitHub's own privacy statement.</p>
 <h2>Sharing your result</h2>
 <p>When you tap Share result, your device's share sheet opens with a short text (time, hints, mistakes and coloured squares). You choose where to send it. We do not receive it.</p>
 <h2>Permissions</h2>
-<p>Kareli does not ask for access to your camera, microphone, photos, contacts or location. On Android it uses the standard internet permission only to open the pages above, and vibration for haptic feedback.</p>
+<p>Kareli asks for camera access only when you tap Take a photo. Choosing a photo uses your phone’s own picker, which shares only the photo you pick. Kareli does not ask for your microphone, contacts or location. On Android it also uses the standard internet permission (for the pages above and the ML Kit diagnostics) and vibration for haptic feedback.</p>
 <h2>App stores</h2>
 <p>Apple and Google may collect information when you download or update apps, under their own privacy policies. They may share anonymous, aggregated statistics with us (for example the number of downloads or crash counts, if you have chosen to share diagnostics with them). This information does not identify you.</p>
 <h2>Children</h2>
-<p>Kareli is suitable for all ages. Because it collects no data, it collects no data from children.</p>
+<p>Kareli is suitable for all ages. It does not knowingly collect personal data from anyone, including children.</p>
 <h2>Your rights</h2>
-<p>Since we do not hold any personal data about you, there is nothing for us to access, correct or delete. Under the GDPR and Türkiye's KVKK you can still contact us with any question.</p>
+<p>We do not hold any personal data about you, so there is nothing for us to access, correct or delete. The ML Kit diagnostics on Android are held by Google under its own privacy policy. Under the GDPR and Türkiye's KVKK you can contact us with any question.</p>
 <h2>Changes</h2>
 <p>If a future version adds a feature that changes this, such as optional cloud sync or purchases, we will update this page and the store listings before that version is released.</p>
 <h2>Contact</h2>
@@ -123,6 +127,8 @@ const T = {
 <p>Yes: Settings → Show mistakes right away. A hint still points out a wrong digit before anything else.</p>
 <h3>How do I copy a puzzle from my book?</h3>
 <p>Open the From a book tab, tap a cell, then a digit, until all the clues are in. Tap Start solving. Kareli checks that the puzzle has exactly one solution and tells you how hard it is.</p>
+<h3>How do I import a puzzle from a photo?</h3>
+<p>Open From a book and tap Take a photo or Choose a photo. Crop the square to the outer border of the grid. Kareli reads the digits on your device and fills the board. Check the highlighted cells against your book, fix anything that is wrong, then tap Start solving. Good light and a straight, sharp photo give the best result.</p>
 <h3>Where is my progress saved? Can I move it to a new phone?</h3>
 <p>Only on your device. There is no account or cloud sync, so progress does not move between devices. Your phone's own backup may restore it.</p>
 <h3>How do I change the language or theme?</h3>
@@ -137,21 +143,25 @@ const T = {
 <p class="meta">Yürürlük tarihi: ${effective.tr}</p>
 <p>Kareli Sudoku ("Kareli", "uygulama") ${developer} tarafından geliştirilmiştir. Bu politika, uygulamayı kullanırken bilgilerine ne olduğunu açıklar.</p>
 <h2>Kısaca</h2>
-<p><mark>Kareli hiçbir kişisel veri toplamaz, saklamaz veya paylaşmaz.</mark> Hesap, reklam, analiz ve takip yoktur.</p>
+<p><mark>Kareli kendisi kişisel veri toplamaz, saklamaz veya paylaşmaz.</mark> Hesap, reklam ve takip yoktur. Kitap bulmacalarının fotoğrafları cihazında okunur ve hiçbir yere yüklenmez. Android'de fotoğraftan aktarma için kullanılan metin tanıma (Google ML Kit) Google'a bazı teknik tanılama verileri gönderir; aşağıda anlatılıyor.</p>
 <h2>Cihazında kalanlar</h2>
 <p>Uygulama oyunlarını, notlarını, günlük sonuçlarını, serini, gördüğün teknikleri ve ayarlarını cihazındaki kendi depolama alanında saklar. Bu bilgiler bize ya da başka birine asla gönderilmez. Uygulamayı silince veya verilerini temizleyince silinir. Telefonunun kendi yedeklemesi açıksa (iCloud veya Google yedeklemesi gibi) işletim sistemi bu verileri kişisel yedeğine ekleyebilir; biz bu yedeğe erişemeyiz.</p>
+<h2>Kitap bulmacalarının fotoğrafları</h2>
+<p>Fotoğraf çek veya Galeriden seç'i kullanırsan fotoğrafı cihazında kırparsın ve rakamlar cihazında okunur: iPhone'da Apple Vision, Android'de Google ML Kit ile. Fotoğraf hiçbir yere yüklenmez, uygulama kendi kopyasını okuduktan hemen sonra siler. Kamera yalnızca Fotoğraf çek'e dokunduğunda kullanılır ve izni vermeyebilirsin.</p>
+<h2>Google ML Kit (yalnızca Android)</h2>
+<p>Kareli, Android'de rakamları okumak için Google ML Kit'in cihaz üzerinde çalışan metin tanımasını kullanır. ML Kit fotoğrafını göndermez, ancak tanılama ve kullanım analizi için Google'a teknik veriler gönderir: cihaz üreticisi, modeli ve işletim sistemi sürümü, uygulama paket adı ve sürümü, kuruluma özel bir kimlik, performans ölçümleri ve hata kodları. Bu yalnızca fotoğraftan aktarmayı kullandığında olur. Google bu verileri şifreli iletir ve üçüncü taraflara aktarmaz; ayrıntılar için <a href="https://developers.google.com/ml-kit/android-data-disclosure">Google'ın ML Kit veri beyanı</a>.</p>
 <h2>İnternet kullanımı</h2>
 <p>Bulmacalar cihazında üretilir ve uygulama internetsiz çalışır. Uygulama sunucularımıza istek göndermez. Ayarlar'da Gizlilik politikası, Kullanım koşulları veya Destek'e dokunduğunda sayfa cihazının tarayıcısında açılır. Bu sayfalar GitHub Pages üzerinden sunulur; GitHub kendi gizlilik bildirimi kapsamında IP adresi gibi temel teknik verileri kaydedebilir.</p>
 <h2>Sonucunu paylaşmak</h2>
 <p>Sonucu paylaş'a dokunduğunda cihazının paylaşım menüsü kısa bir metinle (süre, ipucu, hata ve renkli kareler) açılır. Nereye göndereceğini sen seçersin. Bu metin bize ulaşmaz.</p>
 <h2>İzinler</h2>
-<p>Kareli kameraya, mikrofona, fotoğraflara, rehbere veya konuma erişim istemez. Android'de standart internet iznini yalnızca yukarıdaki sayfaları açmak için, titreşimi de dokunsal geri bildirim için kullanır.</p>
+<p>Kareli kamera iznini yalnızca Fotoğraf çek'e dokunduğunda ister. Galeriden seçmek telefonun kendi seçicisiyle yapılır ve yalnızca seçtiğin fotoğraf paylaşılır. Kareli mikrofona, rehbere veya konuma erişim istemez. Android'de ayrıca standart internet iznini (yukarıdaki sayfalar ve ML Kit tanılama verileri için) ve dokunsal geri bildirim için titreşimi kullanır.</p>
 <h2>Uygulama mağazaları</h2>
 <p>Apple ve Google, uygulama indirip güncellediğinde kendi gizlilik politikaları kapsamında bilgi toplayabilir. Bizimle anonim ve toplu istatistikler paylaşabilirler (örneğin indirme sayısı veya, onlarla tanılama verisi paylaşmayı seçtiysen çökme sayıları). Bu bilgiler seni tanımlamaz.</p>
 <h2>Çocuklar</h2>
-<p>Kareli her yaşa uygundur. Hiç veri toplamadığı için çocuklardan da veri toplamaz.</p>
+<p>Kareli her yaşa uygundur. Çocuklar dahil kimseden bilerek kişisel veri toplamaz.</p>
 <h2>Hakların</h2>
-<p>Hakkında hiçbir kişisel veri tutmadığımız için erişilecek, düzeltilecek veya silinecek bir veri yoktur. KVKK ve GDPR kapsamındaki her soru için bize yazabilirsin.</p>
+<p>Hakkında kişisel veri tutmadığımız için erişilecek, düzeltilecek veya silinecek bir veri yoktur. Android'deki ML Kit tanılama verileri Google'ın kendi gizlilik politikası kapsamında Google'da tutulur. KVKK ve GDPR kapsamındaki her soru için bize yazabilirsin.</p>
 <h2>Değişiklikler</h2>
 <p>İleride bulut eşitleme veya satın alma gibi bunu değiştiren bir özellik eklenirse, o sürüm yayınlanmadan önce bu sayfayı ve mağaza bilgilerini güncelleriz.</p>
 <h2>İletişim</h2>
@@ -200,6 +210,8 @@ const T = {
 <p>Evet: Ayarlar → Yanlış rakamı hemen göster. İpucu yine de önce yanlış rakamı gösterir.</p>
 <h3>Kitabımdaki bulmacayı nasıl aktarırım?</h3>
 <p>Kitaptan sekmesini aç, bir hücreye sonra rakama dokunarak bütün ipuçlarını gir. Çözmeye başla'ya dokun. Kareli bulmacanın tek çözümü olduğunu kontrol eder ve ne kadar zor olduğunu söyler.</p>
+<h3>Bulmacayı fotoğraftan nasıl aktarırım?</h3>
+<p>Kitaptan sekmesini aç, Fotoğraf çek ya da Galeriden seç'e dokun. Kareyi ızgaranın dış çizgisine oturtacak şekilde kırp. Kareli rakamları cihazında okuyup tahtaya yazar. İşaretli hücreleri kitapla karşılaştır, yanlış olanı düzelt, sonra Çözmeye başla'ya dokun. İyi ışık ve düz, net bir fotoğraf en iyi sonucu verir.</p>
 <h3>İlerlemem nerede saklanıyor? Yeni telefona taşıyabilir miyim?</h3>
 <p>Yalnızca cihazında. Hesap veya bulut eşitleme olmadığı için ilerleme cihazlar arasında taşınmaz. Telefonunun kendi yedeklemesi geri yükleyebilir.</p>
 <h3>Dili veya temayı nasıl değiştiririm?</h3>
@@ -222,7 +234,7 @@ const index = `<!doctype html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Kareli Sudoku</title>
-<meta name="description" content="A calm sudoku with hints that teach the technique. No ads, no account, no data collected.">
+<meta name="description" content="A calm sudoku with hints that teach the technique. No ads, no account.">
 <link rel="icon" href="icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -236,7 +248,7 @@ const index = `<!doctype html>
   </header>
   <main>
     <h1>A calm sudoku with <mark>hints that teach</mark></h1>
-    <p class="meta">Daily puzzle · Copy puzzles from your book · No ads, no account, no data collected</p>
+    <p class="meta">Daily puzzle · Copy puzzles from your book · No ads, no account</p>
     <div class="cards">
       <a href="en/privacy.html"><b>Privacy Policy</b><span>English</span></a>
       <a href="en/terms.html"><b>Terms of Use</b><span>English</span></a>
