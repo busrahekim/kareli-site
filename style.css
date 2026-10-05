@@ -1,0 +1,54 @@
+:root {
+  --bg: #eceff3;
+  --grid: rgba(64, 104, 168, 0.10);
+  --sheet: #fdfdfb;
+  --ink: #18202c;
+  --muted: #5b6577;
+  --pen: #2445a6;
+  --line: #d7dde6;
+  --marker: rgba(255, 205, 25, 0.62);
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #10141a;
+    --grid: rgba(150, 180, 230, 0.05);
+    --sheet: #171c24;
+    --ink: #e6e9ef;
+    --muted: #9aa3b2;
+    --pen: #92b0ff;
+    --line: #2a313c;
+    --marker: rgba(255, 200, 40, 0.36);
+    color-scheme: dark;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background-color: var(--bg);
+  background-image: linear-gradient(var(--grid) 1px, transparent 1px), linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 22px 22px;
+  color: var(--ink);
+  font: 16px/1.6 "Figtree", "Segoe UI", system-ui, sans-serif;
+}
+.wrap { max-width: 720px; margin: 0 auto; padding-inline: 20px; padding-block: 32px 64px; }
+header { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 28px; }
+.brand { display: flex; align-items: center; gap: 12px; color: inherit; text-decoration: none; }
+.brand img { width: 44px; height: 44px; border-radius: 10px; }
+.brand b { font: 800 26px/1 "Bricolage Grotesque", system-ui, sans-serif; letter-spacing: -0.02em; }
+.lang a { color: var(--muted); font-weight: 700; text-decoration: none; margin-left: 12px; }
+.lang a[aria-current="page"] { color: var(--ink); }
+main { background: var(--sheet); border: 1px solid var(--line); border-radius: 16px; padding: 28px clamp(20px, 5vw, 40px); }
+h1, h2 { font-family: "Bricolage Grotesque", system-ui, sans-serif; text-wrap: balance; }
+h1 { font-size: 34px; line-height: 1.15; margin: 0 0 6px; letter-spacing: -0.02em; }
+h2 { font-size: 21px; margin: 28px 0 6px; }
+.meta { color: var(--muted); font-size: 14px; margin: 0 0 20px; }
+mark { background: linear-gradient(transparent 52%, var(--marker) 52%, var(--marker) 92%, transparent 92%); color: inherit; padding: 0 2px; }
+a { color: var(--pen); }
+ul { padding-left: 22px; }
+li + li { margin-top: 4px; }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 12px; margin-top: 20px; }
+.cards a { display: block; padding: 16px; border: 1px solid var(--line); border-radius: 12px; text-decoration: none; color: var(--ink); background: var(--bg); }
+.cards a b { display: block; font-family: "Bricolage Grotesque", system-ui, sans-serif; font-size: 18px; }
+.cards a span { color: var(--muted); font-size: 14px; }
+footer { color: var(--muted); font-size: 13px; text-align: center; margin-top: 24px; }
