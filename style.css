@@ -51,7 +51,13 @@ li + li { margin-top: 4px; }
 .cards a { display: block; padding: 16px; border: 1px solid var(--line); border-radius: 12px; text-decoration: none; color: var(--ink); background: var(--bg); }
 .cards a b { display: block; font-family: "Bricolage Grotesque", system-ui, sans-serif; font-size: 18px; }
 .cards a span { color: var(--muted); font-size: 14px; }
-.pages { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 16px; }
+.pages {
+  position: sticky; top: 0; z-index: 10;
+  display: flex; flex-wrap: wrap; gap: 8px;
+  margin: 0 -20px 16px; padding: 10px 20px;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
+}
 .pages a {
   padding: 9px 16px; border-radius: 999px; border: 1px solid var(--line); background: var(--sheet);
   color: var(--ink); text-decoration: none; font-weight: 700; font-size: 15px;
