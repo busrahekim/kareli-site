@@ -5,6 +5,22 @@ import fs from 'node:fs';
 const cfg = JSON.parse(fs.readFileSync(new URL('./site.json', import.meta.url), 'utf8'));
 const { developer, brand, email, effective } = cfg;
 
+const NAV = {
+  en: [
+    ['privacy.html', 'Privacy Policy'],
+    ['terms.html', 'Terms of Use'],
+    ['support.html', 'Support'],
+  ],
+  tr: [
+    ['privacy.html', 'Gizlilik Politikası'],
+    ['terms.html', 'Kullanım Koşulları'],
+    ['support.html', 'Destek'],
+  ],
+};
+
+const navLinks = (lang, file) =>
+  NAV[lang].map(([href, label]) => `<a href="${href}"${href === file ? ' aria-current="page"' : ''}>${label}</a>`).join('');
+
 const page = (lang, file, title, body) => `<!doctype html>
 <html lang="${lang}">
 <head>
@@ -23,10 +39,14 @@ const page = (lang, file, title, body) => `<!doctype html>
     <a class="brand" href="../"><img src="../icon.png" alt=""><b>Kareli</b></a>
     <nav class="lang"><a href="../en/${file}"${lang === 'en' ? ' aria-current="page"' : ''}>English</a><a href="../tr/${file}"${lang === 'tr' ? ' aria-current="page"' : ''}>Türkçe</a></nav>
   </header>
+  <nav class="pages" aria-label="${lang === 'tr' ? 'Sayfalar' : 'Pages'}">${navLinks(lang, file)}</nav>
   <main>
 ${body}
   </main>
-  <footer>© 2026 ${brand} · Kareli Sudoku</footer>
+  <footer>
+    <nav class="foot-links">${navLinks(lang, file)}<a href="mailto:${email}">${email}</a></nav>
+    © 2026 ${brand} · Kareli Sudoku
+  </footer>
 </div>
 </body>
 </html>

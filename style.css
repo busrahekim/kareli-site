@@ -51,4 +51,15 @@ li + li { margin-top: 4px; }
 .cards a { display: block; padding: 16px; border: 1px solid var(--line); border-radius: 12px; text-decoration: none; color: var(--ink); background: var(--bg); }
 .cards a b { display: block; font-family: "Bricolage Grotesque", system-ui, sans-serif; font-size: 18px; }
 .cards a span { color: var(--muted); font-size: 14px; }
+.pages { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 16px; }
+.pages a {
+  padding: 9px 16px; border-radius: 999px; border: 1px solid var(--line); background: var(--sheet);
+  color: var(--ink); text-decoration: none; font-weight: 700; font-size: 15px;
+}
+.pages a:hover { border-color: var(--muted); }
+.pages a[aria-current="page"] { background: var(--ink); border-color: var(--ink); color: var(--sheet); }
+.pages a:focus-visible, .foot-links a:focus-visible { outline: 2px solid var(--pen); outline-offset: 2px; }
 footer { color: var(--muted); font-size: 13px; text-align: center; margin-top: 24px; }
+.foot-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 16px; margin-bottom: 8px; }
+.foot-links a { color: var(--muted); font-weight: 700; }
+.foot-links a[aria-current="page"] { color: var(--ink); text-decoration: none; }
